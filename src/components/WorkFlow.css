@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+.container {
+    margin-top: 200px;
+}
+
+.home-description {
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    color: #707070 !important;
+    font-family: "Roboto", sans-serif !important;
+    font-weight: 400 !important;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.description {
+    width: 520px;
+    text-align: initial;
+    margin-top: 20px !important;
+    line-height: 30px;
+    color: #707070 !important;
+    font-family: "Roboto", sans-serif !important;
+    font-weight: 400 !important;
+}
+
+.description-card {
+    width: 100%;
+    margin-top: 20px !important;
+    line-height: 30px;
+    color: #707070 !important;
+    font-family: "Roboto", sans-serif !important;
+    font-weight: 400 !important;
+}
+
+.icon-card {
+    font-size: 30px !important;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.businessIcon {
+    background-color: rgba(255, 89, 89, 0.331);
+    color: #ff5959;
+}
+
+.webIcon {
+    background-color: rgba(103, 111, 163, 0.331);
+    color: #676fa3;
+}
+
+.codeIcon {
+    background-color: rgba(159, 191, 255, 0.331);
+    color: #80abff;
+}
+
+.btn-view {
+    margin-top: 20px !important;
+}
+
+.container-image img {
+    width: 500px;
+}
+
+
+.title-card {
+    justify-content: center;
+}
+
+.title-center {
+    margin-top: 150px !important;
+    justify-content: center;
+}
+
+.container-home-workflow {
+    margin-top: 90px !important;
+}
+
+.container-home-about {
+    margin-top: 90px !important;
+}
+
+.workflow {
+    display: flex;
+    justify-content: center;
+}
+
+.about-description {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.container-price {
+    position: relative;
+}
+
+.price-card {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px !important;
+    line-height: 30px;
+    color: #FF5959 !important;
+    font-size: 21px!important;
+    font-family: "Roboto", sans-serif !important;
+    font-weight: 700 !important;
+    position: absolute;
+    top: 86%;
+    left: 0;
+    justify-content: center;
+}
+
+.price-container {
+    color: #676FA3;
+    font-size: 40px!important;
+}
+
+.container-home-price {
+    margin-top: 90px !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .container-image img {
+        width: 350px;
+    }
+
+    .information {
+        width: 90%;
+    }
+
+    .description {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .container-home-presentation {
+        flex-direction: column-reverse !important;
+        align-items: center;
+    }
+
+    .container-home-workflow {
+        flex-direction: column !important;
+        align-items: center;
+    }
+
+    .container-home-price {
+        flex-direction: column !important;
+        align-items: center;
+    }
+}
