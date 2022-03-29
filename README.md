@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# React App
 
 This is the official page of Asu Software
 
