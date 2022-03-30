@@ -1,0 +1,29 @@
+.container-home-chart {
+    margin-top: 90px !important;
+}
+
+.container-card {
+    width: 500px;
+}
+
+.chart-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .description {
+        width: 90%;
+    }
+
+    .container-card {
+        width: 90%;
+    }
+}

@@ -57,6 +57,7 @@ const NavBar = () => {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
+              className="btn-menu"
               color="inherit"
             >
               <MenuIcon />
