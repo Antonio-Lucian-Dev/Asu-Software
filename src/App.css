@@ -1,11 +1,17 @@
 .App {
   text-align: center;
-  background-color: #EEF2FF!important;
+  background-color: #FFFF!important;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.floating-button {
+  position: absolute!important;
+  bottom: 0;
+  left: 50%;
 }
 
 @media (prefers-reduced-motion: no-preference) {

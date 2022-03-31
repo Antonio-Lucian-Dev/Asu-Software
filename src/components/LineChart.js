@@ -42,7 +42,7 @@ const LineChart = () => {
                 <Typography
                     variant="p"
                     component="div"
-                    className='description'
+                    className='description-chart'
                     sx={{ display: { xs: 'flex', md: 'flex' } }}>
                     Our business has grown since we founded Asu Software. The following chart represents our growth in the market, this represents how good we are and how much we like to do beautiful things for our customers
                 </Typography>

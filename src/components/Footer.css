@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+
+
+.container-footer {
+    margin-top: 90px !important;
+    background-color: #484848;
+    padding-top: 45px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-footer .title {
+    color: #ffff !important;
+    font-family: "Roboto", sans-serif !important;
+    font-weight: 400 !important;
+    margin-bottom: 20px!important;
+}
+
+.home-footer {
+    display: flex;
+    flex-direction: column!important;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-footer-social {
+    display: flex;
+    flex-direction: column!important;
+    align-items: center;
+}
+
+.information-footer-icon {
+    color: #ffff !important;
+}
+
+.information-footer {
+    color: #ffff !important;
+    font-family: "Roboto", sans-serif !important;
+    font-weight: 400 !important;
+    margin-left: 20px!important;
+}
+
+footer {
+    color: #ffffff !important;
+    font-family: "Roboto", sans-serif !important;
+    font-weight: 400 !important;
+    border-top: 1px solid hsla(0,0%,100%,.18);
+    width: 90%;
+    margin-top: 100px;
+    padding-top: 32px;
+}
+
+.container-information-social {
+    display: flex;
+    justify-content: start!important;
+    width: 165px;
+}
+
+.container-information-social .social-link {
+    text-decoration: none;
+    color: #ffffff !important;
+    cursor: pointer;
+}
+
+.container-information-social .social-link .social-icon {
+    font-size: 27px!important;
+    margin-right: 10px;
+}
+
+.title-grey {
+    margin-bottom: 30px!important;
+    color: #7b88a8;
+    font-size: 13px;
+    line-height: 1.4;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: "DM Sans", sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 16px!important;
+    width: 165px;
+}
+
+.container-information {
+    margin-top: 4px!important;
+    margin-bottom: 8px!important;
+    color: #fff;
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .home-footer-social {
+        margin-bottom: 30px!important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .title-grey {
+        justify-content: center;
+    }
+
+    .container-information {
+        justify-content: center;
+    }
+
+    .container-information-social {
+        justify-content: center!important;
+    }
+}

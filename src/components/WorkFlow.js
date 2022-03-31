@@ -20,7 +20,7 @@ const WorkFlow = () => {
                             variant="h5"
                             noWrap
                             component="div"
-                            className='title'
+                            className='title title-home'
                             sx={{ display: { xs: 'flex', md: 'flex' }, mb: '4' }}>
                             The best solution for your idea!
                         </Typography>
@@ -48,12 +48,12 @@ const WorkFlow = () => {
                 component="div"
                 className='title title-center'
                 sx={{ display: { xs: 'flex', md: 'flex' }, mb: '4' }}>
-                The best solution for your idea!
+                Our workflow
             </Typography>
 
             <Grid container spacing={4} className="container-home-workflow">
                 <Grid item xs={12} sm={12} md={4} lg={4} className="workflow">
-                    <Card sx={{ maxWidth: 300, height: 300, padding: 3 }}>
+                    <Card sx={{ maxWidth: 300, height: 300, padding: 3 }} className="card">
                         <BusinessCenterIcon className='icon-card businessIcon' />
                         <Typography
                             variant="h6"
@@ -74,7 +74,7 @@ const WorkFlow = () => {
                     </Card>
                 </Grid>
                 <Grid item xs={12} sm={12} md={4} lg={4} className="workflow">
-                    <Card sx={{ maxWidth: 300, height: 300, padding: 3 }}>
+                    <Card sx={{ maxWidth: 300, height: 300, padding: 3 }} className="card">
                         <WebIcon className='icon-card webIcon' />
                         <Typography
                             variant="h6"
@@ -95,7 +95,7 @@ const WorkFlow = () => {
                     </Card>
                 </Grid>
                 <Grid item xs={12} sm={12} md={4} lg={4} className="workflow">
-                    <Card sx={{ maxWidth: 300, height: 300, padding: 3 }}>
+                    <Card sx={{ maxWidth: 300, height: 300, padding: 3 }} className="card">
                         <CodeIcon className='icon-card codeIcon' />
                         <Typography
                             variant="h6"
@@ -103,7 +103,7 @@ const WorkFlow = () => {
                             className='title-card'
                             align='center'
                             sx={{ display: { xs: 'flex', md: 'flex' }, mb: '4' }}>
-                            Business Planning
+                            Implementation
                         </Typography>
                         <Typography
                             variant="p"
@@ -111,7 +111,7 @@ const WorkFlow = () => {
                             className='description-card'
                             align='start'
                             sx={{ display: { xs: 'flex', md: 'flex' }, mb: '4' }}>
-                            First of all we need to establish the business plan, to understand the users who will use the application, your need for business
+                            Finally, after receiving your design feedback, we’ll begin the final implementation of the product
                         </Typography>
                     </Card>
                 </Grid>
@@ -145,14 +145,25 @@ const WorkFlow = () => {
                 </Grid>
             </Grid>
 
+            <div className='container-title'>
+                <Typography
+                    variant="h6"
+                    component="div"
+                    className='title-price'
+                    align='center'
+                    sx={{ display: { xs: 'flex', md: 'flex' }, mb: '4' }}>
+                    Find the perfect service for your business.
+                </Typography>
+            </div>
+
             <Grid container spacing={4} className="container-home-price">
                 <Grid item xs={12} sm={12} md={4} lg={4} className="workflow">
-                    <Card sx={{ maxWidth: 300, height: 300, padding: 3 }} className="container-price">
+                    <Card sx={{ maxWidth: 300, padding: 3 }} className="container-price no-card">
                         <BrushIcon className='icon-card price-container' />
                         <Typography
                             variant="h6"
                             component="div"
-                            className='title-card'
+                            className='title-card-price'
                             align='center'
                             sx={{ display: { xs: 'flex', md: 'flex' }, mb: '4' }}>
                             Design
@@ -160,7 +171,7 @@ const WorkFlow = () => {
                         <Typography
                             variant="p"
                             component="div"
-                            className='description-card'
+                            className='description-card-price'
                             align='start'
                             sx={{ display: { xs: 'flex', md: 'flex' }, mb: '4' }}>
                             The prices for a design are quite wide and depend on the complexity of the product. If you only need a design to see your idea in reality, then we invite you to contact us.
@@ -168,20 +179,29 @@ const WorkFlow = () => {
                         <Typography
                             variant="p"
                             component="div"
+                            className='description-card-price-bottom'
+                            align='start'
+                            sx={{ display: { xs: 'flex', md: 'flex' }, mb: '4' }}>
+                            Starts at
+                        </Typography>
+                        <Typography
+                            variant="p"
+                            component="div"
                             className='price-card'
                             align='center'
                             sx={{ display: { xs: 'flex', md: 'flex' }, mb: '4' }}>
-                            Price: 500 lei
+                            <span className='price-span'>€</span> 100
                         </Typography>
+                        <button className='btn-getStarted'>Get Started</button>
                     </Card>
                 </Grid>
                 <Grid item xs={12} sm={12} md={4} lg={4} className="workflow">
-                    <Card sx={{ maxWidth: 300, height: 300, padding: 3 }} className="container-price">
+                    <Card sx={{ maxWidth: 300, padding: 3 }} className="container-price v-card">
                         <PhoneIphoneIcon className='icon-card price-container' />
                         <Typography
                             variant="h6"
                             component="div"
-                            className='title-card'
+                            className='title-card-price'
                             align='center'
                             sx={{ display: { xs: 'flex', md: 'flex' }, mb: '4' }}>
                             Mobile Development
@@ -189,7 +209,7 @@ const WorkFlow = () => {
                         <Typography
                             variant="p"
                             component="div"
-                            className='description-card'
+                            className='description-card-price'
                             align='start'
                             sx={{ display: { xs: 'flex', md: 'flex' }, mb: '4' }}>
                             We develop mobile applications, for android at the best standards, if you have the idea, let us make it real on your phone.
@@ -197,20 +217,29 @@ const WorkFlow = () => {
                         <Typography
                             variant="p"
                             component="div"
+                            className='description-card-price-bottom center-starts'
+                            align='start'
+                            sx={{ display: { xs: 'flex', md: 'flex' }, mb: '4' }}>
+                            Starts at
+                        </Typography>
+                        <Typography
+                            variant="p"
+                            component="div"
                             className='price-card'
                             align='center'
                             sx={{ display: { xs: 'flex', md: 'flex' }, mb: '4' }}>
-                            Price: 900 lei
+                            <span className='price-span'>€</span> 150
                         </Typography>
+                        <button className='btn-getStarted'>Get Started</button>
                     </Card>
                 </Grid>
                 <Grid item xs={12} sm={12} md={4} lg={4} className="workflow">
-                    <Card sx={{ maxWidth: 300, height: 300, padding: 3 }} className="container-price">
+                    <Card sx={{ maxWidth: 300, padding: 3 }} className="container-price no-card">
                         <WebIcon className='icon-card price-container' />
                         <Typography
                             variant="h6"
                             component="div"
-                            className='title-card'
+                            className='title-card-price'
                             align='center'
                             sx={{ display: { xs: 'flex', md: 'flex' }, mb: '4' }}>
                             Web Development
@@ -218,7 +247,7 @@ const WorkFlow = () => {
                         <Typography
                             variant="p"
                             component="div"
-                            className='description-card'
+                            className='description-card-price'
                             align='start'
                             sx={{ display: { xs: 'flex', md: 'flex' }, mb: '4' }}>
                             We develop web applications that are responsive to different sizes such as laptop, tablet and phone. So you can see your website or web application ready to upload online
@@ -226,11 +255,20 @@ const WorkFlow = () => {
                         <Typography
                             variant="p"
                             component="div"
+                            className='description-card-price-bottom'
+                            align='start'
+                            sx={{ display: { xs: 'flex', md: 'flex' }, mb: '4' }}>
+                            Starts at
+                        </Typography>
+                        <Typography
+                            variant="p"
+                            component="div"
                             className='price-card'
                             align='center'
                             sx={{ display: { xs: 'flex', md: 'flex' }, mb: '4' }}>
-                            Price: 1000 lei
+                            <span className='price-span'>€</span> 200
                         </Typography>
+                        <button className='btn-getStarted'>Get Started</button>
                     </Card>
                 </Grid>
             </Grid>
