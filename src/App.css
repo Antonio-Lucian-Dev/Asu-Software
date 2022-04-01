@@ -15,6 +15,10 @@
   left: 97%;
 }
 
+.MuiPaper-root {
+  background-color: #676FA3!important;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

@@ -1,17 +1,15 @@
-import axios from "axios";
-
-export const sendMail = (data) => {
-
-    let responseFromServer = "";
+export function sendMail(data) {
 
     const URL = "https://blueberry-crumble-16635.herokuapp.com";
 
-    axios.post(`${URL}/api/v1/send-mail`, { data })
-        .then(res => {
-            responseFromServer = res;
-            console.log(res);
-        });
+    const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+    };
 
-        console.log("Response: ", responseFromServer)
-        return responseFromServer !== null && responseFromServer !== "" ? responseFromServer : "Error";
+    fetch(`${URL}/api/v1/send-mail`, requestOptions)
+        .then(res => {
+            return res.json();
+        });
 };

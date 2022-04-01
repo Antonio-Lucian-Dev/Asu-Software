@@ -46,8 +46,6 @@ const NavBar = () => {
     setLanguage(event.target.value);
   }
 
-  console.log(window.innerHeight);
-
   const navigateTo = (event) => {
     setTimeout(() => {
       if (event == 0) {

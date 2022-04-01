@@ -1,10 +1,9 @@
 import { Button, Grid, TextField, Typography } from '@mui/material';
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import contactImage from '../assets/contact.png';
 import './Contact.css';
-import { sendMail } from '../services/sendMail';
 
-const Contact = () => {
+const Contact = (props) => {
 
     const userFormRef = {
         firstName: useRef(null),
@@ -14,7 +13,13 @@ const Contact = () => {
         message: useRef(null)
     };
 
-    const [response, setResponse] = useState("");
+    const resetForm = () => {
+        userFormRef.firstName = null;
+        userFormRef.lastName = null;
+        userFormRef.email = null;
+        userFormRef.subject = null;
+        userFormRef.message = null;
+    }
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -25,10 +30,8 @@ const Contact = () => {
                 email: userFormRef.email.current.value,
                 message: userFormRef.message.current.value
             }
-            console.log(data);
-            // send mail
-            setResponse(sendMail(data));
-            console.log(response);
+            props.onMailSend(data);
+            resetForm();
       //  }
     }
 
