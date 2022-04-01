@@ -24,7 +24,12 @@ function App() {
       setIsButtonUpVisible(false);
     }
     console.log(window.scrollY);
-  })
+    console.log(isButtonUpVisibile);
+  });
+
+  const scrollToInitialPage = () => {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
 
   return (
     <div className="App">
@@ -34,9 +39,9 @@ function App() {
       <LineChart />
       <Contact />
       <Footer />
-      <Fab size="small" color="secondary" aria-label="add" className='floating-button'>
+      {isButtonUpVisibile && <Fab size="small" color="secondary" aria-label="add" className='floating-button' onClick={scrollToInitialPage}>
         <KeyboardArrowUpIcon />
-      </Fab>
+      </Fab>}
     </div>
   );
 }
