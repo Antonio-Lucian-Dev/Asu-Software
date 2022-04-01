@@ -46,6 +46,22 @@ const NavBar = () => {
     setLanguage(event.target.value);
   }
 
+  console.log(window.innerHeight);
+
+  const navigateTo = (event) => {
+    setTimeout(() => {
+      if (event == 0) {
+        document.getElementsByClassName("container-home-presentation")[0].scrollIntoView({ behavior: "smooth" });
+      } else if (event == 1) {
+        document.getElementsByClassName("title-about")[0].scrollIntoView({ behavior: "smooth" });
+      } else if (event == 3) {
+        document.getElementsByClassName("title-price")[0].scrollIntoView({ behavior: "smooth" });
+      } else if (event == 4) {
+        document.getElementsByClassName("title-contact")[0].scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
+  }
+
 
   return (
     <AppBar position="relative" className='container-nav'>
@@ -94,8 +110,11 @@ const NavBar = () => {
                   display: { xs: 'block', md: 'none' },
                 }}
               >
-                {pages.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
+                {pages.map((page, index) => (
+                  <MenuItem key={page} onClick={() => {
+                    handleCloseNavMenu();
+                    navigateTo(index);
+                  }}>
                     <Typography textAlign="center">{page}</Typography>
                   </MenuItem>
                 ))}
@@ -103,17 +122,17 @@ const NavBar = () => {
             </Box>
 
             <Box className='links' sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', lg: 'flex', xl: 'flex' } }}>
-              {pages.map((page) => (
+              {pages.map((page, index) => (
                 <Button
                   key={page}
-                  onClick={handleCloseNavMenu}
+                  onClick={() => navigateTo(index)}
                   className='link'
                   sx={{ my: 2, mr: 2, color: 'white', display: 'block' }}
                 >
                   {page}
                 </Button>
               ))}
-              <FormControl sx={{ m: 1, minWidth: 80, display: { xs: 'flex', md: 'none' } }}>
+              {/* <FormControl sx={{ m: 1, minWidth: 80, display: { xs: 'flex', md: 'none' } }}>
                 <InputLabel sx={{ top: "-7px" }} id="demo-simple-select-autowidth-label">Language</InputLabel>
                 <Select
                   labelId="demo-simple-select-autowidth-label"
@@ -129,9 +148,9 @@ const NavBar = () => {
                   <MenuItem value={0}>ENG</MenuItem>
                   <MenuItem value={1}>RO</MenuItem>
                 </Select>
-              </FormControl>
+              </FormControl> */}
             </Box>
-            <FormControl sx={{ m: 1, minWidth: 80, display: { xs: 'none', md: 'flex' } }}>
+            {/* <FormControl sx={{ m: 1, minWidth: 80, display: { xs: 'none', md: 'flex' } }}>
               <InputLabel sx={{ top: "-7px" }} id="demo-simple-select-autowidth-label">Language</InputLabel>
               <Select
                 labelId="demo-simple-select-autowidth-label"
@@ -147,7 +166,7 @@ const NavBar = () => {
                 <MenuItem value={0}>ENG</MenuItem>
                 <MenuItem value={1}>RO</MenuItem>
               </Select>
-            </FormControl>
+            </FormControl> */}
           </div>
         </Toolbar>
       </Container>

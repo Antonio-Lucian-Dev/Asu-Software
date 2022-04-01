@@ -121,7 +121,7 @@ const WorkFlow = () => {
                 variant="h5"
                 noWrap
                 component="div"
-                className='title title-center'
+                className='title title-center title-about'
                 sx={{ display: { xs: 'flex', md: 'flex' }, mb: '4' }}>
                 About Us
             </Typography>

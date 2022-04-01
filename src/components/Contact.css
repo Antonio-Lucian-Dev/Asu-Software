@@ -73,6 +73,9 @@
     .title-contact {
         font-size: 42px!important;
     }
+    .container-home-contact {
+        flex-direction: column-reverse!important;
+    }
 }
 
 @media only screen and (max-width: 1200px) {
